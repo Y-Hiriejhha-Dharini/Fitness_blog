@@ -25,16 +25,12 @@
                         <a href="/login/view" class="text-blue-500 pl-6">Login</a>
                     @else
                         <div class="row mx-auto">
-                            <label for="user">Welcome, {{auth()->user()->name}}</label>
-                            <select name="user" class="text-blue-500 pl-4">
-                                <option value="">
-                                    <form action="/logout" method="POST" class="flex items-center pl-3">
-                                        @csrf
-                                        <button>Log Out</button>
-                                    </form>
-                                </option>
-                            </select>
-                            
+                            <a name="user" class="text-blue-500 pl-4">Welcome, {{auth()->user()->name}}</a>
+                                <form action="/logout" method="POST" class="flex items-center pl-3">
+                                    @csrf
+                                    <button>Log Out</button>
+                                </form>
+                                <a href="/post/create">Create New Post</a>
                         </div>
                     @endguest
                 </div>
