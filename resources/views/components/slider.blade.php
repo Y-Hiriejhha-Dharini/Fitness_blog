@@ -8,7 +8,7 @@
                             data-setbg="/img/img3.jpg">
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6  p-0">
+                    <div class="col-lg-3 col-md-6 p-0 lg:block hidden">
                         <div class="hero__inside__item hero__inside__item--small set-bg"
                             data-setbg="/img/img4.jpg">
                         </div>
@@ -16,7 +16,7 @@
                             data-setbg="/img/img5.webp">
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6  p-0">
+                    <div class="col-lg-3 col-md-6 p-0 lg:block hidden">
                         <div class="hero__inside__item set-bg" data-setbg="/img/img8.jpg">
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                             data-setbg="/img/img10.jpg">
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 p-0">
+                    <div class="col-lg-3 col-md-6 p-0 lg:block hidden">
                         <div class="hero__inside__item hero__inside__item--small set-bg"
                             data-setbg="/img/img11.jpg">
                         </div>
@@ -39,7 +39,7 @@
                             data-setbg="/img/img12.jpg">
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 p-0">
+                    <div class="col-lg-3 col-md-6 p-0 lg:block hidden">
                         <div class="hero__inside__item set-bg" data-setbg="/img/img13.jpg">
                         </div>
                     </div>

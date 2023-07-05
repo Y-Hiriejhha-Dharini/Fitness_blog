@@ -7,7 +7,7 @@
                                     @csrf
                                     
                                     <header class="flex items-center">
-                                        <img src="/images/lary-avatar.svg" width="50" height="50" class="rounded-full" alt="">
+                                        <img src="/img/icon.png" width="50" height="50" class="rounded-full" alt="">
                                         <h6 class="ml-5">Type your Comment here</h6>
                                     </header>
                                     <div class="mt-2">

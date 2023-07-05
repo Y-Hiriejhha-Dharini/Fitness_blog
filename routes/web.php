@@ -49,8 +49,8 @@ Route::post('/login',[LoginController::class,'login'])->middleware('guest');
 Route::post('/logout',[LoginController::class,'destroy'])->middleware('auth');
 Route::post('/post/{post:slug}/comment',[CommentController::class,'create']);
 
-Route::get('/post/create', [PostController::class,'create']);
-Route::post('/post/store',[PostController::class,'store']);
-Route::post('/post/edit',[PostController::class,'edit']);
-Route::post('/post/delete',[PostController::class,'destroy']);
-Route::get('/ping',[SubscribeController::class,'add']);
+Route::get('/create', [PostController::class,'create'])->middleware('auth');
+Route::post('/store',[PostController::class,'store'])->middleware('auth');
+// Route::post('/edit',[PostController::class,'edit'])->middleware('auth');
+// Route::post('/delete',[PostController::class,'destroy'])->middleware('auth');
+// Route::get('/ping',[SubscribeController::class,'add']);

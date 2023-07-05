@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -24,6 +25,28 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('posts');
+        $categories = Category::select('id','name')->get();
+        return view('create',['categories'=>$categories]);
+    }
+
+    public function store()
+    {
+        $post = request()->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            // 'img_path' => 'required| image',
+            'excerpt' => 'required',
+            'body' => 'required',
+            'category_id' => 'required',
+        ]);
+
+        $post += ["user_id" => Auth::user()->id];
+        $post += ["img_path" => 'img/'.str_replace(' ','',request()->file('img_path')->getClientOriginalName())];
+
+        request()->img_path->move(public_path('img'), request()->file('img_path')->getClientOriginalName());
+
+        Post::create($post);
+
+        return redirect('/')->with('success','Post Stored Suucessfully');
     }
 }

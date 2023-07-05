@@ -1,8 +1,8 @@
 <header class="header">
     <div class="header__top">
-        <div class="container flex">
-            <div class="col-5 row pt-2 pb-2 flex-1">
-                        {{-- <a href="./signin.html" class="primary-btn">Subscribe</a> --}}
+        <div class="container flex justify-end">
+            <div class="row flex-1 pt-2 pb-2">
+                    {{-- <a href="./signin.html" class="primary-btn">Subscribe</a>
                     <form action="/ping" method="get">
                         <div class="w-full p-3">
                             <div class="relative"> 
@@ -13,24 +13,24 @@
                                 <button class="h-10 rounded bg-black absolute top-2 text-sm right-2 px-3 text-white hover:bg-gray-900 ">Subscribe Now</button> </div>
                             </div>
                         </div>
-                    </form>
-                <div class="col-2 flex-1 mx-auto">
+                    </form> --}}
+                <div class="col-2">
                     <div class="header__search">
                         <i class="fa fa-search search-switch"></i>
                     </div>
                 </div>
-                <div class="col-5 flex-1">
+                <div class="mx-auto my-2">
                     @guest
                         <a href="/register/view" class="text-blue-500 pl-8">Register</a>
                         <a href="/login/view" class="text-blue-500 pl-6">Login</a>
                     @else
                         <div class="row mx-auto">
-                            <a name="user" class="text-blue-500 pl-4">Welcome, {{auth()->user()->name}}</a>
+                            <a name="user" class="text-blue-500 pl-4 my-2 mx-3">Welcome, {{auth()->user()->name}}</a>
+                            <a href={{url('/create')}} class=" hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">Create New Post</a>
                                 <form action="/logout" method="POST" class="flex items-center pl-3">
                                     @csrf
-                                    <button>Log Out</button>
+                                    <button class=" text-blue-700  hover:bg-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Log Out</button>
                                 </form>
-                                <a href="/post/create">Create New Post</a>
                         </div>
                     @endguest
                 </div>

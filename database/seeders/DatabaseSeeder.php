@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         // Category::factory(3)->create();
-        Post::factory(3)
+        Post::factory(10)
             ->has(Comment::factory()->count(3))
             ->create();
         // $user = User::factory()->create([

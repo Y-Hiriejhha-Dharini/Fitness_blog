@@ -26,7 +26,7 @@ class PostFactory extends Factory
             'excerpt'=> $this->faker->sentence(),
             'body' => $this->faker->paragraph(),
             'created_at' => $this->faker->dateTime(),
-            'img_path' => $this->faker->filePath()
+            'img_path' => 'img/gym1.jpg'
         ];
     }
 }
